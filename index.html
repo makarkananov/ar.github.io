@@ -24,6 +24,24 @@
   <a-assets>
     </a-asset-item>
   </a-assets>
+   <a-marker
+    preset="hiro"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerA"
+  >
+    <a-entity
+      id="bowser-model"
+      gltf-model="titan/scene.gltf"
+      position="0 0 0"
+      scale="1 1 1"
+      class="clickable"
+      gesture-handler
+    >
+    </a-entity>
+  </a-marker>
+  
   <a-marker
     type = 'pattern' 
     url = 'pattern-mars.patt'
