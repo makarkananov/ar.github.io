@@ -14,7 +14,7 @@
 
 <body>
 <a-scene
-  arjs=’sourceType: webcam; sourceWidth:1920; sourceHeight:1080; displayWidth: 1920; displayHeight: 1080;’
+  arjs="sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
   embedded
   renderer="logarithmicDepthBuffer: true;"
   vr-mode-ui="enabled: false"
@@ -24,6 +24,23 @@
   <a-assets>
     </a-asset-item>
   </a-assets>
+  <a-marker
+    type = 'pattern' 
+    url = 'pattern-mars.patt'
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerA"
+  >
+    <a-entity
+      id="bowser-model"
+      gltf-model="mars/scene.gltf"
+      position="0 0 0"
+      scale="0.5 0.5 0.5"
+      class="clickable"
+      gesture-handler
+    >
+  </a-marker> 
   <a-marker
     preset="hiro"
     raycaster="objects: .clickable"
