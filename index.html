@@ -25,7 +25,7 @@
   </a-assets>
    <a-marker
     type='barcode' 
-    value='2'
+    value='1'
     raycaster="objects: .clickable"
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;"
@@ -44,8 +44,8 @@
  
      
    <a-marker
-    type = 'pattern' 
-    url = 'pattern-jupiter.patt'
+    type='barcode' 
+    value='2'
     raycaster="objects: .clickable"
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;"
@@ -54,6 +54,24 @@
     <a-entity
       id="bowser-model"
       gltf-model="beet/scene.gltf"
+      position="0 0 0"
+      scale="1 1 1"
+      class="clickable"
+      gesture-handler
+    >
+  </a-marker> 
+     
+        <a-marker
+    type='barcode' 
+    value='3'
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerB"
+  >
+    <a-entity
+      id="bowser-model"
+      gltf-model="saturn/scene.gltf"
       position="0 0 0"
       scale="1 1 1"
       class="clickable"
