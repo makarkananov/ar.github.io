@@ -11,10 +11,9 @@
   <script src="gesture-handler.js"></script>
   <title>AR</title>
 </head>
-
 <body>
 <a-scene
-  arjs="sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
+  arjs="sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
   embedded
   renderer="logarithmicDepthBuffer: true;"
   vr-mode-ui="enabled: false"
@@ -25,7 +24,8 @@
     </a-asset-item>
   </a-assets>
    <a-marker
-    preset="kanji"
+    type='barcode' 
+    value='2'
     raycaster="objects: .clickable"
     emitevents="true"
     cursor="fuse: false; rayOrigin: mouse;"
@@ -33,7 +33,7 @@
   >
     <a-entity
       id="bowser-model"
-      gltf-model="beet/scene.gltf"
+      gltf-model="jupiter/scene.gltf"
       position="0 0 0"
       scale="1 1 1"
       class="clickable"
@@ -53,7 +53,7 @@
   >
     <a-entity
       id="bowser-model"
-      gltf-model="jupiter/scene.gltf"
+      gltf-model="beet/scene.gltf"
       position="0 0 0"
       scale="1 1 1"
       class="clickable"
